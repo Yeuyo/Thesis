@@ -5,7 +5,7 @@ krow=zeros(neDoF*nels,1); kcol=krow; kval=krow;
 uvw=zeros(nDoF,1); uvwold=uvw; fint=uvw; react=uvw;
 fd=(1:nDoF); fd(bc(:,1))=[];
 epsE=zeros(6,ngp,nels); epsEn=epsE; sig=epsE; sigN=epsE;
-oduX=zeros(3,3,ngp,nels); duX=oduX; rst=[];
+oduX=zeros(3,3,ngp,nels); duX=oduX;
 for lstp=0:lstps
   fext=(lstp/lstps)*fext0; oobf=react+fext-fint; oobfnorm=2*NRtol; NRit=0; 
   while ((NRit<NRitmax)&&(oobfnorm>NRtol))
@@ -30,5 +30,4 @@ for lstp=0:lstps
     fprintf('%4i %4i %6.3e\n',lstp,NRit,oobfnorm);
   end
   uvwold=uvw; epsEn=epsE; sigN=sig; oduX=oduX+duX;
-  rst=[rst; lstp abs(uvw(end-2)) uvw(end)];
 end
