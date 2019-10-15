@@ -56,7 +56,6 @@ for gp=1:ngp
   ke=ke+(Bt'*D*Bt+Ks)*detJ*wp(gp);
   fint=fint+Bt'*sig(:,gp)*detJ*wp(gp);
 end
-1;
 
 function [wp,GpLoc]=GpPos(ngp)
 if ngp==8 %2x2x2
