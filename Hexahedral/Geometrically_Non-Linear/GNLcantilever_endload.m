@@ -1,4 +1,5 @@
-function [coord,etopol,fext,bc,E,v,ngp,lstps,NRitmax,NRtol]=GNLcantilever_endload
+function [coord,etopol,fext,bc,E,v,ngp,lstps,NRitmax,NRtol]=...
+                                      GNLcantilever_endload
 E=1.2e6; v=0;
 ngp=8; lstps=20; NRitmax=50; NRtol=1.0e-6;
 nels=300; len=10; wid=1; thk=0.1;

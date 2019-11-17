@@ -18,10 +18,15 @@ for lstp=0:lstps
     end
     uvw=uvw+dduvw; react=react+dreact; duvw=uvw-uvwold;
     for nel=1:nels
-      ed=reshape(ones(ndim,1)*etpl(nel,:)*ndim-(ndim-1:-1:0).'*ones(1,nen),1,nen*ndim);
-      [ke,felem,epsE(:,:,nel),sig(:,:,nel),duX(:,:,:,nel)]=TLFE(coord(etpl(nel,:),:),E,v,duvw(ed),ngp,epsEn(:,:,nel),sigN(:,:,nel),oduX(:,:,:,nel));
-      if lstp==0; krow((nel-1)*neDoF+1:nel*neDoF)=reshape(ed.'*ones(1,nen*ndim),neDoF,1);
-                  kcol((nel-1)*neDoF+1:nel*neDoF)=reshape(ones(nen*ndim,1)*ed  ,neDoF,1);
+      ed=reshape(ones(ndim,1)*etpl(nel,:)*...
+                 ndim-(ndim-1:-1:0).'*ones(1,nen),1,nen*ndim);
+      [ke,felem,epsE(:,:,nel),sig(:,:,nel),duX(:,:,:,nel)]=...
+        TLFE(coord(etpl(nel,:),:),E,v,duvw(ed),ngp,epsEn(:,:,nel),...
+             sigN(:,:,nel),oduX(:,:,:,nel));
+      if lstp==0; krow((nel-1)*neDoF+1:nel*neDoF)=...
+                    reshape(ed.'*ones(1,nen*ndim),neDoF,1);
+                  kcol((nel-1)*neDoF+1:nel*neDoF)=...
+                    reshape(ones(nen*ndim,1)*ed  ,neDoF,1);
       end
       kval((nel-1)*neDoF+1:nel*neDoF)=reshape(ke,neDoF,1);
       fint(ed)=fint(ed)+felem;
