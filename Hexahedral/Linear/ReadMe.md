@@ -1,4 +1,5 @@
 # Linear Hexahedral Finite Element
+A geometrically and material linear 8-noded hexahedral FE algorithm.
 
 ## Input Parameters
 | Variable | Matrix Sizing | Format | Description |
@@ -19,3 +20,7 @@ where `n` is the number of elements, `nbc` is the number of nodes that have Diri
 | Variable | Matrix Sizing | Format | Description |
 | --- | --- | --- | --- |
 | `d` | 3n * 1 | [d<sub>1</sub> d<sub>2</sub> ... d<sub>3n</sub>]<sup>T</sup> | Displacement at each degree of freedoms in m |
+
+## Files
+1. LinearHexahedral.m - The main MATLAB files to run the Linear Hexahedral FE analysis.
+2. cantilever_endload.m - A function file to provide a sample of input for the Linear Hexahedral FE analysis.
