@@ -10,7 +10,7 @@
 | `bc` | nbc * 2 | [i u<sub>i</sub>] | Boundary conditions: degrees of freedom, <math>i</math> having defined displacements of u<sub>i</sub> |
 | `f` | 3n * 1 | [f<sub>1</sub> f<sub>2</sub> ... f<sub>3n</sub>]<sup>T</sup> | Total applied force at each degree of freedom in kN |
 
-where n is the number of elements, nbc is the number of nodes that have Dirichlet boundary condition (displacement is known). Note that the element topology has to be written in the format shown below
+where `n` is the number of elements, `nbc` is the number of nodes that have Dirichlet boundary condition (displacement is known). Note that the element topology has to be written in the format shown below
 <p align="center">
   <img src="8_Hexahedral_Nodal_Numbering.png" width="350" title="hover text">
 </p>
