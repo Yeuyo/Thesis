@@ -1,9 +1,7 @@
-function[ke,fint,epsE,sig,duX]=TLFE(coord,E,v,duvw,ngp,epsEn,sigN,oduX)
+function[ke,fint,epsE,sig,duX]=TLFE(coord,D,duvw,ngp,epsEn,sigN,oduX)
 nen=size(coord,1); epsE=zeros(6,ngp); sig=epsE;
 [wp,GpLoc]=GpPos(ngp); ke=zeros(nen*3); Ks=ke;
 fint=zeros(nen*3,1); duX=zeros(3,3,ngp);
-Iz=zeros(6); Iz(1:3,1:3)=ones(3); I2=eye(6); I2(4:6,4:6)=0.5*eye(3);
-D=E/((1+v)*(1-2*v))*(v*Iz+((1-2*v)*I2));
 for gp=1:ngp
   xsi=GpLoc(gp,1); eta=GpLoc(gp,2); zet=GpLoc(gp,3);
   dNr=dershapefunc2D(xsi,eta,zet);
@@ -46,7 +44,7 @@ for gp=1:ngp
          duX(1,1,gp)*duX(3,1,gp) + duX(1,2,gp)*duX(3,2,gp) + ...
          duX(1,3,gp)*duX(3,3,gp))];
   epsE(:,gp)=epsEt+epsEn(:,gp);
-  sig(:,gp)=(D*epsEt)+sigN(:,gp);
+  sig(:,gp)=(D(:,:,gp)*epsEt)+sigN(:,gp);
   s=[sig(1,gp) sig(4,gp) sig(6,gp);
      sig(4,gp) sig(2,gp) sig(5,gp);
      sig(6,gp) sig(5,gp) sig(3,gp)];
@@ -66,7 +64,7 @@ for gp=1:ngp
       A*[dNX(1,n)*eye(3); dNX(2,n)*eye(3); dNX(3,n)*eye(3)];
   end
   Bt=BL+BNL;
-  ke=ke+(Bt'*D*Bt+Ks)*detJ*wp(gp);
+  ke=ke+(Bt'*D(:,:,gp)*Bt+Ks)*detJ*wp(gp);
   fint=fint+Bt'*sig(:,gp)*detJ*wp(gp);
 end
 
