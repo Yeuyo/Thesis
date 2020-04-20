@@ -24,3 +24,9 @@ where `n` is the number of elements, `nbc` is the number of nodes that have Diri
 ## Files
 1. LinearHexahedral.m - The main MATLAB files to run the Linear Hexahedral FE analysis.
 2. cantilever_endload.m - A function file to provide a sample of input for the Linear Hexahedral FE analysis.
+
+## Algorithm Process
+<p align="center">
+  <img src="LinearHex_Algorithm_Process.png" width="1654" title="hover text">
+</p>
+Note that the number in top right of each procedure box relates to the line number in the LinearHexahedral.m.
