@@ -3,7 +3,7 @@
 All the codes used for simulating the cardiac behaviour is included here, dividing into their individual folders.
 Note that the codes listed here are formatted to allow them to fit into the thesis margin without line breaking.
 
-The link to the thesis is still pending and will be updated upon approval by the City, University of London's thesis depository.
+The thesis can be found at https://openaccess.city.ac.uk/id/eprint/24692/.
 
 ## Hexahedral Elements
 
