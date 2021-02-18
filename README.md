@@ -5,6 +5,8 @@ Note that the codes listed here are formatted to allow them to fit into the thes
 
 The thesis can be found at https://openaccess.city.ac.uk/id/eprint/24692/.
 
+Note: The codes here are written in a way that it best fit in the printed copy of the thesis. This results in the code being short and compact, making it easier to follow the process of the formulation and do not follow programming's best practices.
+
 ## Hexahedral Elements
 
 All chapter 3 codes are categorised in the Hexahedral folder, which sub-divides into the following folders:
