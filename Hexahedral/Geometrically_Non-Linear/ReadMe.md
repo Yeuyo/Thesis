@@ -13,7 +13,7 @@ Total Lagrangian approach is used to account for the geometrically non-linear be
 
 where `n` is the number of elements, `nbc` is the number of nodes that have Dirichlet boundary condition (displacement is known). Note that the element topology has to be written in the format shown below
 <p align="center">
-  <img src="8_Hexahedral_Nodal_Numbering.png" width="350" title="hover text">
+  <img src="../Linear/8_Hexahedral_Nodal_Numbering.png" width="350" title="hover text">
 </p>
 
 ## Output Parameters
@@ -28,7 +28,6 @@ where `n` is the number of elements, `nbc` is the number of nodes that have Diri
 
 ## Algorithm Process
 <p align="center">
-  <img src="Geometrically_Non-Linear_Hexahedral_Process.pdf.png" width="1654" title="hover text">
+  <img src="Geometrically_Non-Linear_Hexahedral_Process.png" width="1654" title="hover text">
 </p>
-Note that the number in top right of each procedure box relates to the line number in the LinearHexahedral.m.
-
+Note that the number in top left of each procedure box relates to TLHexahedral.m while the number in the top right of each procedure box relates to the line number in the TLHE.m.
