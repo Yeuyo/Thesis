@@ -19,7 +19,7 @@ where `n` is the number of elements, `nbc` is the number of nodes that have Diri
 ## Output Parameters
 | Variable | Matrix Sizing | Format | Description |
 | --- | --- | --- | --- |
-| `d` | 3n * 1 | [d<sub>1</sub> d<sub>2</sub> ... d<sub>3n</sub>]<sup>T</sup> | Displacement at each degree of freedoms in m |
+| `uvw` | 3n * 1 | [d<sub>1</sub> d<sub>2</sub> ... d<sub>3n</sub>]<sup>T</sup> | Displacement at each degree of freedoms in m |
 
 ## Files
 1. TLHexahedral.m - The main MATLAB files to run the Total-Lagrangian Geometrically Non-Linear Hexahedral FE analysis.
