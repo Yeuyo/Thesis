@@ -1,0 +1,11 @@
+cff-version: 1.2.0
+message: "If you use this software, please cite it as below."
+authors:
+- family-names: "Wong"
+  given-names: "Yew Yan"
+  orcid: "https://orcid.org/0000-0001-6557-4492"
+title: "Developing a cardiac mechanics analysis framework using shell finite elements"
+version: 1.0.0
+doi: 10.5281/zenodo.20651747
+date-released: 2019-12-01
+url: "https://openaccess.city.ac.uk/id/eprint/24692/"
