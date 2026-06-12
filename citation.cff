@@ -4,6 +4,8 @@ authors:
 - family-names: "Wong"
   given-names: "Yew Yan"
   orcid: "https://orcid.org/0000-0001-6557-4492"
+type: thesis
+thesis-type: "PhD Thesis"
 title: "Developing a cardiac mechanics analysis framework using shell finite elements"
 version: 1.0.0
 doi: 10.5281/zenodo.20651747
